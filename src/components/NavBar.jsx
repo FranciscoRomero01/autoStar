@@ -1,3 +1,4 @@
+import CartWidget from "./CartWidget";
 
 function NavBar(){
     return(
@@ -11,6 +12,7 @@ function NavBar(){
                     <li><a href="#" className="white-text">Contacto</a></li>
                 </ul>
                 <ul className="right">
+                    <li><CartWidget /></li>
                     <li><a href="#" className="white-text">Iniciar Sesion</a></li>
                     <li><a href="#" className="white-text">Registrarse</a></li>
                 </ul>
