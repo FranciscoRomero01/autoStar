@@ -1,0 +1,10 @@
+.rate{
+    display: flex;
+    justify-content: space-around;
+}
+
+.price{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}

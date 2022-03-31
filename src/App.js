@@ -1,7 +1,7 @@
-import './App.css';
+import 'materialize-css/dist/css/materialize.css';
+import './style/App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
-import 'materialize-css/dist/css/materialize.css';
 
 function App() {
   return<>

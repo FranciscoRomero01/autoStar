@@ -1,6 +1,11 @@
+import Cards from "./Cards";
+import ItemCount from "./ItemCount";
+
 const ItemListContainer = (props) => {
     return(
-        <h1 className="titulo"> {props.title} </h1>
+        <>
+            <Cards />
+        </>
     )
 }
 
