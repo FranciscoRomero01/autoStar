@@ -1,0 +1,14 @@
+.cards{
+    flex-direction: row !important;
+    justify-content: space-around;
+}
+
+.card-title{
+    font-weight: bold !important;
+    font-size: 12px !important;
+}
+
+img{
+    width: 250px !important;
+    height: 150px;
+}

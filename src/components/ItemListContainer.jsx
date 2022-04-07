@@ -1,11 +1,12 @@
-import Cards from "./Cards";
-import ItemCount from "./ItemCount";
+import '../style/ItemListContainer.css';
+import { ItemList } from "./itemList";
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
+
     return(
-        <>
-            <Cards />
-        </>
+        <div className="cards">
+            <ItemList/>
+        </div>
     )
 }
 

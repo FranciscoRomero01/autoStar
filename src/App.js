@@ -6,7 +6,7 @@ import ItemListContainer from './components/ItemListContainer';
 function App() {
   return<>
     <NavBar/>
-    <ItemListContainer title="el auto de tus sueños, lo encontras en autostar" />
+    <ItemListContainer/>
   </>;
 }
 
