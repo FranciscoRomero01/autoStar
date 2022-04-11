@@ -29,7 +29,17 @@ const data = [
         kilometres: 83.399,
         year: 2017,
         img: "https://http2.mlstatic.com/D_NQ_NP_936632-MLA49023777934_022022-O.webp",
-        price: 2850000
+        price: 2850000,
+        caracteristicas : {
+            brand: "Ford",
+            model: "Focus III",
+            color: "Azul",
+            fuelType: "Naphtha",
+            doors: 5,
+            transmission: "Manual",
+            engine: "2.0",
+            bodyType: "Hatchback"
+        }
     }
 ];
 

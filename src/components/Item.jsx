@@ -1,21 +1,21 @@
 import '../style/Item.css';
 
-export const Item = (props) => {
+export const Item = ({img, name, year, kilometres, price}) => {
 
     return(
         <div className="card">
             <div className="card-image">
                 <a href="#">
-                    <img src={props.img} />
-                    <span className="card-title">{props.name}</span>
+                    <img src={img} />
+                    <span className="card-title">{name}</span>
                 </a>
             </div>
             <div className="card-content">
-                <p>Año:{props.year}</p>
-                <p>Kilometros:{props.kilometres}</p>
+                <p>Año:{year}</p>
+                <p>Kilometros:{kilometres}</p>
             </div>
             <div className="card-action">
-                <a href="#">${props.price}</a>
+                <a href="#">${price}</a>
             </div>
         </div>
     );

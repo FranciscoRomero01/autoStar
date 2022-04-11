@@ -3,12 +3,12 @@ import { Item } from "./Item";
 import data from './product';
 
 
-export const ItemList = (productos) => {
+export const ItemList = () => {
 
     const getData = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                return resolve(data);
+                return resolve(data.caracteristicas);
             }, 2000)
         });
     };
@@ -37,5 +37,5 @@ export const ItemList = (productos) => {
               }
           </div>
         </>
-    )
+    );
 }
