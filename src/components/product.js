@@ -30,7 +30,7 @@ const data = [
         year: 2017,
         img: "https://http2.mlstatic.com/D_NQ_NP_936632-MLA49023777934_022022-O.webp",
         price: 2850000,
-        caracteristicas : {
+        features : {
             brand: "Ford",
             model: "Focus III",
             color: "Azul",

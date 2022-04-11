@@ -17,7 +17,7 @@ function ItemCount() {
     };
 
     const price = () => {
-        alert("Gracias por su valoracion!")
+        alert("Gracias por su valoracion!");
     }
 
     return(

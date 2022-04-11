@@ -9,6 +9,8 @@
 
 img{
     height: 100%;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
 }
 
 
@@ -38,4 +40,44 @@ img{
 
 .itemDetailYK h4{
     font-weight: bold;
+}
+
+.description{
+    border: 30px #dbdbdb solid;
+    border-top: 0px;
+    padding: 10px;
+    padding-bottom: 0%;
+    height: 515px;
+}
+
+.description h5{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.brand, .model, .color, .fuelType, .doors, .transmission, .engine, .bodyType{
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.brand p, .model p, .color p, .fuelType p, .doors p, .transmission p, .engine p, .bodyType p {
+    font-size: 20px;
+    text-align: center;
+    height: 50px;
+    font-weight: lighter;
+}
+
+.descriptionBrand,  .descriptionColor,  .descriptionDoors, .descriptionEngine{
+    border-right: 2px solid black;
+    margin: 0%;
+    background: rgb(144 148 153 / 27%);
+    font-weight: bolder;
+}
+
+.descriptionModel, .descriptionFT, .descriptionT, .descriptionBT {
+    border-right: 2px solid black;
+    margin: 0%;
+    background: rgb(236, 236, 236 /20%);
+    font-weight: bolder;
 }
