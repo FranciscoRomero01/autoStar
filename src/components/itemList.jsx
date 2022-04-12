@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Item } from "./Item";
-import data from './product';
+import data from '../utils/product';
 
 
 export const ItemList = () => {

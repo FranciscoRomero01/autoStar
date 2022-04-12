@@ -23,12 +23,12 @@ function ItemCount() {
     return(
         <>
             <div className="rate">
-                <a class="btn-floating pulse red accent-4" onClick={decrease}><i class="material-icons">-</i></a>
+                <a className="btn-floating pulse red accent-4" onClick={decrease}><i className="material-icons">-</i></a>
                 <p>{rate}</p>
-                <a class="btn-floating pulse red accent-4" onClick={increment}><i class="material-icons">+</i></a>
+                <a className="btn-floating pulse red accent-4" onClick={increment}><i className="material-icons">+</i></a>
             </div>
             <div className="price red accent-4">
-                <a href="#" className="white-text" onClick={price}> Valorar </a>
+                <a href="#" className="white-text" onClick={price}> COMPRAR </a>
             </div>
         </>
     )
