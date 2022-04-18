@@ -6,6 +6,7 @@ const data = [
         price: 34080.00,
         priceMP: 39192.00,
         stock: 25,
+        description: "De la familia Intel I5, con 5 nucleos, frecuencia de 2.6 GHz, frecuencia turbo de 4.4GHz y grafica integrada de UHD Graphics 730",
         general:{
             family: "Intel I5",
             cores: 6,
@@ -37,6 +38,7 @@ const data = [
         price: 95617.01,
         priceMP: 109959.56,
         stock: 8,
+        description: "De la familia Intel I9, con 8 nucleos, frecuencia de 3.5 GHz, frecuencia turbo de 5.3 GHz y grafica integrada de UHD Graphics 750",
         general: {
             family: "Intel I9",
             cores: 8,
@@ -68,6 +70,7 @@ const data = [
         price: 56327.04,
         priceMP: 64776.10,
         stock: 15,
+        description: "De la familia Intel I7, con 8 nucleos, frecuencia de 2.5 GHz, frecuencia turbo de 4.9 GHz y sin grafica integrada",
         general : {
             family: "Intel I7",
             cores: 8,
@@ -99,6 +102,7 @@ const data = [
         price: 45251.25,
         priceMP: 52038.94,
         stock: 10,
+        description: "De la familia Intel I7, con 8 nucleos, frecuencia de 2.9 GHz, frecuencia turbo de 4.8 GHz y sin grafica integrada",
         general : {
             family: "Intel Core I7",
             cores: 8,
@@ -130,6 +134,7 @@ const data = [
         price: 55824.26,
         priceMP: 64197.90,
         stock: 25,
+        description: "De plataforma Intel, con 1 salida HDMI, placa de Red 'Intel® 2.5GbE LAN Chip (2.5 Gbit/1 Gbit/100 Mbit)', WiFi 'Intel® Wi-Fi 6 AX201', USB '4 X USB 2.0/1.1 Ports, 3 X USB 3.2 Gen 2 Type-A Ports (Red), 2 X USB 3.2 Gen 1 Ports, 1 X USB Type-C™ Port, With USB 3.2 Gen 2', con cantidad de memoria RAM DDR4 x4(Max. 128GB) y sonido 'Realtek® ALC1220-VB Codec'",
         general : {
             socket: "LGA1200",
             chipset: "Z490",
@@ -171,6 +176,7 @@ const data = [
         price: 42819.32,
         priceMP: 49242.22,
         stock: 30,
+        description: "De plataforma Intel, con 1 salida HDMI, 1 salida DisplayPort, placa de Red 'Intel® I225-V 2.5Gb Ethernet ASUS LANGuard (X2)', USB '8 (3.2) / 2 (2.0)', con cantidad de memoria RAM DDR4 x4(Max. 128GB) y sonido 'Realtek ALC4080'",
         general: {
             socket: 1200,
             chipset: "Z590",
@@ -211,6 +217,7 @@ const data = [
         price: 36918.32,
         priceMP: 42456.07,
         stock: 20,
+        description: "De plataforma Intel, con 1 salida HDMI, 1 salida DisplayPort, placa de Red 'Intel® I225-V 2.5G Ethernet', WiFi 'Intel® Wi-Fi 6', USB '2 X USB 2.0, 2 X USB 3.2 Gen1, 2 X USB 3.2 Gen 2, 1 X USB 3.2 Gen 2x2 Type-C®', con cantidad de memoria RAM DDR4 x4(Max. 128GB) y sonido 'Realtek ALC S1200A 7.1'",
         general: {
             socket: "LGA1200",
             chipset: "Z590",
@@ -254,6 +261,7 @@ const data = [
         price: 30269.28,
         priceMP: 34809.67,
         stock: 10,
+        description: "De Familia de Kingston, tipo de memoria DDR4, tamaño de la memoria 32 GB, con disipador de calor, voltaje de 1.35 V y velocidad de 3600 MHz",
         general: {
             family: "Kingston",
             memoryType: "DDR4",
@@ -283,6 +291,7 @@ const data = [
         price: 4800.00,
         priceMP: 5520.00,
         stock: 8,
+        description: "De Familia de Kingston, tipo de memoria DDR4, tamaño de la memoria 4 GB, con disipador de calor, voltaje de 1.2 V y velocidad de 2666 MHz",
         general: {
             family: "Kingston",
             memoryType: "DDR4",
@@ -312,6 +321,7 @@ const data = [
         price: 3048.74,
         priceMP: 3506.05,
         stock: 3,
+        description: "Tipo de memoria DDR4, tamaño de la memoria 4 GB, sin disipador de calor, voltaje de 1.2 V y velocidad de 2666 MHz",
         general: {
             family: "Sin Especificar",
             memoryType: "DDR4",
@@ -341,6 +351,7 @@ const data = [
         price: 372340.80,
         priceMP: 428191.92,
         stock: 25,
+        description: "Contiene 2 salidas HDMI, 3 salidas DisplayPort, consume 350W, Watts recomendados de la fuente 750 W, con una capacidad de memoria de 12GB, tipo GDDR6X con una velocidad de 19 Gbps",
         general: {
             connectionType: "PCI Express 4.0",
             chipsetGPU: "RTX 3080 Ti",
@@ -381,6 +392,7 @@ const data = [
         price: 219580.00,
         priceMP: 252517.00,
         stock: 10,
+        description: "Contiene 1 salida HDMI, 3 salidas DisplayPort, consume 290W, Watts recomendados de la fuente 600 W, con una capacidad de memoria de 8GB, tipo DDDR6X con una velocidad de 19 Gbps",
         general: {
             connectionType: "PCI® Express 4.0",
             chipsetGPU: "RTX 3080 Ti"
@@ -420,6 +432,7 @@ const data = [
         price: 246860.00,
         priceMP: 283889.00,
         stock: 20,
+        description: "Contiene 1 salida HDMI, 3 salidas DisplayPort, consume 320W, Watts recomendados de la fuente 700 W, con una capacidad de memoria de 10GB, tipo DDDR6X con una velocidad de 19 Gbps", 
         general: {
             connectionType: "PCI® Express 4.0",
             chipsetGPU: "NVIDIA GeForce RTX 3080"
@@ -459,6 +472,7 @@ const data = [
         price: 257332.79,
         priceMP: 295932.71,
         stock: 18,
+        description: "Contiene 2 salidas HDMI, 3 salidas DisplayPort, consume 320W, Watts recomendados de la fuente 750 W, con una capacidad de memoria de 10GB, tipo DDDR6X con una velocidad de 19 Gbps", 
         general: {
             connectionType: "PCI® Express 4.0",
             chipsetGPU: "RTX 3080"
@@ -498,6 +512,7 @@ const data = [
         price: 161550.00,
         priceMP: 185782.50,
         stock: 12,
+        description: "Contiene 1 salida HDMI, 3 salidas DisplayPort, consume 220W, Watts recomendados de la fuente 600 W, con una capacidad de memoria de 8GB, tipo DDDR6X con una velocidad de 14 Gbps", 
         general: {
             connectionType: "PCI® 4.0",
             chipsetGPU: "NVIDIA GeForce RTX 3080",
@@ -538,6 +553,7 @@ const data = [
         price: 27227.00,
         priceMP: 185782.50,
         stock: 16,
+        description: "Disco Solido de 2 TB, con conector PCIe 3.0, su velocidad de lectura secuencial es hasta 2100 MB/S y de escritura es hasta 1700 MH/S",
         general: {
             ability: "2 TB",
         },
@@ -576,6 +592,7 @@ const data = [
         price: 15825.00,
         priceMP: 18198.75,
         stock: 12,
+        description: "Disco Solido de 960 GB, con conector 'SATA Rev. 3.0 (6 Gb/S), Retrocompatible Con SATA Rev. 2.0 (3 Gb/S)', su velocidad de lectura secuencial es hasta 545 MB/S y de escritura es hasta 545 MH/S",
         general: {
             ability: "960 GB",
             connector: "SATA Rev. 3.0 (6 Gb/S), Retrocompatible Con SATA Rev. 2.0 (3 Gb/S)",
@@ -599,6 +616,7 @@ const data = [
         price: 2560.00,
         priceMP: 2944.00,
         stock: 10,
+        description: "Fuente de formato ATX 12V V2.31, con Watts Nominales de 600W y reales de 200W, contiene un ventilador de 120mm y una eficiencia menos de 80% tipicamente.",
         general: {
             format: "ATX 12V V2.31",
             PCF: "Sin Especificar",
@@ -632,6 +650,7 @@ const data = [
         price: 4000.00,
         priceMP: 4600.00,
         stock: 6,
+        description: "Fuente de formato ATX, con Watts Nominales de 550W y reales de 550W, contiene un ventilador de 120mm y protecciones 'CE, TUV SUD, CB, EAC Y RCM'.",
         general: {
             format: "ATX",
             PCF: "Active PFC",
@@ -665,6 +684,7 @@ const data = [
         price: 7814.38,
         priceMP: 8986.54,
         stock: 20,
+        description: "De plataforma AMD, con 1 salida HDMI, 1 salida DVI-D y 1 salida VGA, una placa de Red 'LAN 10/100/1000 Mbps', USB '44 X USB 3.0, 2 X 2.0', con cantidad de memoria RAM DDR4 x2(Max. 32GB) y sonido 'Realtek ALC887/897 Audio Codec'",
         general: {
             socket: "AM4",
             chipset: "X370",

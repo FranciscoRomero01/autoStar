@@ -1,6 +1,5 @@
 import '../style/ItemDetail.css';
 import ItemCount from './ItemCount';
-import data from '../utils/product';
 
 const ItemDetail = ({item}) => {
 
@@ -35,7 +34,7 @@ const ItemDetail = ({item}) => {
                         Descripcion
                     </h5>
                     <h6>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique doloribus suscipit, id adipisci assumenda doloremque. Maxime doloremque, illum repellendus soluta voluptates id dolorem distinctio ducimus quod ratione possimus architecto perspiciatis!
+                        {item.description}
                     </h6>
                 </div>
                 </>
