@@ -23,8 +23,12 @@ const data = [
             l1: "64 K",
             l2: "256 K",
             l3: "12 MB"
+        },
+        categoryId: 1,
+        category: {
+            name: "Micropricesadores",
+            id: 1
         }
-
     },
     {
         id: 2,
@@ -50,12 +54,17 @@ const data = [
             l1: "64 K",
             l2: "256 K",
             l3: "16 MB"
+        },
+        categoryId: 1,
+        category: {
+            name: "Micropricesadores",
+            id: 1
         }
     },
     {
         id:3,
         name: "Micro Intel I7-11700F 4.9Ghz 16Mb S.1200",
-        img: "https://http2.mlstatic.com/D_NQ_NP_837315-MLA49524678844_032022-W.webp",
+        img: "https://www.compugarden.com.ar/Temp/App_WebSite/App_PictureFiles/Items/BX8070811700F_800.jpg",
         price: 56327.04,
         priceMP: 64776.10,
         stock: 15,
@@ -76,6 +85,11 @@ const data = [
             l1: "64 K",
             l2: "256 K",
             l3: "16 MB"
+        },
+        categoryId: 1,
+        category: {
+            name: "Micropricesadores",
+            id: 1
         }
     },
     {
@@ -102,6 +116,11 @@ const data = [
             l1: "512 kb",
             l2: "2 MB",
             l3: "16 MB"
+        },
+        categoryId: 1,
+        category: {
+            name: "Micropricesadores",
+            id: 1
         }
     },
     {
@@ -138,6 +157,11 @@ const data = [
         energy: {
             PinConnector24: 1,
             PinCPUConector8: 2
+        },
+        categoryId: 2,
+        category: {
+            name: "Motherboard",
+            id: 2
         }
     },
     {
@@ -173,6 +197,11 @@ const data = [
         energy: {
             PinConnector24: 1,
             PinCPUConector8: 1
+        },
+        categoryId: 2,
+        category: {
+            name: "Motherboard",
+            id: 2
         }
     },
     {
@@ -211,6 +240,11 @@ const data = [
             PinConnector24: 1,
             PinCPUConector8: 1,
             PinCPUConector4: 1
+        },
+        categoryId: 2,
+        category: {
+            name: "Motherboard",
+            id: 2
         }
     },
     {
@@ -235,6 +269,11 @@ const data = [
             memoryPin: 288,
             heatsink: "Si",
             performanceProfile: "XMP 2.0"
+        },
+        categoryId: 3,
+        category: {
+            name: "Memoria RAM",
+            id: 3
         }
     },
     {
@@ -259,6 +298,11 @@ const data = [
             memoryPin: 288,
             heatsink: "Si",
             performanceProfile: "XMP 2.0"
+        },
+        categoryId: 3,
+        category: {
+            name: "Memoria RAM",
+            id: 3
         }
     },
     {
@@ -283,6 +327,11 @@ const data = [
             memoryPin: 288,
             heatsink: "No",
             performanceProfile: "No"
+        },
+        categoryId: 3,
+        category: {
+            name: "Memoria RAM",
+            id: 3
         }
     },
     {
@@ -318,6 +367,11 @@ const data = [
             memoryInterface: "384 Bit",
             processTypes: "CUDA",
             CUDA: 10240
+        },
+        categoryId: 4,
+        category: {
+            name: "Placa de Video",
+            id: 4
         }
     },
     {
@@ -352,6 +406,11 @@ const data = [
             memoryInterface: "256 Bit",
             processTypes: "CUDA",
             CUDA: 6144
+        },
+        categoryId: 4,
+        category: {
+            name: "Placa de Video",
+            id: 4
         }
     },
     {
@@ -386,6 +445,11 @@ const data = [
             memoryInterface: "320 Bit",
             processTypes: "CUDA",
             CUDA: 8704
+        },
+        categoryId: 4,
+        category: {
+            name: "Placa de Video",
+            id: 4
         }
     },
     {
@@ -420,6 +484,11 @@ const data = [
             memoryInterface: "320 Bit",
             processTypes: "CUDA",
             CUDA: 8704
+        },
+        categoryId: 4,
+        category: {
+            name: "Placa de Video",
+            id: 4
         }
     },
     {
@@ -455,6 +524,11 @@ const data = [
             memoryInterface: "256 Bit",
             processTypes: "CUDA",
             CUDA: 4864
+        },
+        categoryId: 4,
+        category: {
+            name: "Placa de Video",
+            id: 4
         }
     },
     {
@@ -466,7 +540,6 @@ const data = [
         stock: 16,
         general: {
             ability: "2 TB",
-            
         },
         connectivity: {
             HDMIOutputs: 1,
@@ -489,6 +562,141 @@ const data = [
             memoryInterface: "256 Bit",
             processTypes: "CUDA",
             CUDA: 4864
+        },
+        categoryId: 5,
+        category: {
+            name: "Almacenamiento",
+            id: 5
+        }
+    },
+    {
+        id: 17,
+        name: "Disco Solido SSD 960GB Kingston A400 SATA III",
+        img: "https://www.compugarden.com.ar/Temp/App_WebSite/App_PictureFiles/Items/SA400S37-960G_800.jpg",
+        price: 15825.00,
+        priceMP: 18198.75,
+        stock: 12,
+        general: {
+            ability: "960 GB",
+            connector: "SATA Rev. 3.0 (6 Gb/S), Retrocompatible Con SATA Rev. 2.0 (3 Gb/S)",
+            usefulLife: "Hasta 1 Millon De Horas"
+        },
+        energy: {
+            consumptionMax: "0.642W (Lectura), 1.535W (Escritura)",
+            consumptionRepose: "0.195 W",
+            consumptionAverage: "0.279 W"
+        },
+        categoryId: 5,
+        category: {
+            name: "Almacenamiento",
+            id: 5
+        }
+    },
+    {
+        id: 18,
+        name: "Fuente 600W NAXIDO",
+        img: "https://www.compugarden.com.ar/Temp/App_WebSite/App_PictureFiles/Items/NATX-600SW_800.jpg",
+        price: 2560.00,
+        priceMP: 2944.00,
+        stock: 10,
+        general: {
+            format: "ATX 12V V2.31",
+            PCF: "Sin Especificar",
+            wattsNominales: "600W",
+            wattsReales: "200W"
+        },
+        connectors: {
+            ATX24Pines: "Si",
+            EPS4Pines: 1,
+            SATA: 2,
+            molex: 2,
+            PCIExpress62: "N/A"
+        },
+        features: {
+            efficiency: "> 80% Tipicamente",
+            protectors: "Sin Especificar",
+            MTBF: "Sin Especificar",
+            ventilator: "Si (120mm)",
+            wireA200V: "Si"
+        },
+        categoryId: 6,
+        category: {
+            name: "Fuente",
+            id: 6
+        }
+    },
+    {
+        id: 19,
+        name: "Fuente 550W Thermaltake LitePower",
+        img: "https://www.compugarden.com.ar/Temp/App_WebSite/App_PictureFiles/Items/LPT550NL2NK_800.jpg",
+        price: 4000.00,
+        priceMP: 4600.00,
+        stock: 6,
+        general: {
+            format: "ATX",
+            PCF: "Active PFC",
+            wattsNominales: "550W",
+            wattsReales: "550W"
+        },
+        connectors: {
+            ATX24Pines: "Si",
+            EPS4Pines: 1,
+            SATA: 5,
+            molex: 4,
+            PCIExpress62: 2
+        },
+        features: {
+            efficiency: "No especifica",
+            protectors: "CE, TUV SUD, CB, EAC Y RCM",
+            MTBF: "> 100K Hs",
+            ventilator: "Si (120mm)",
+            wireA200V: "Si"
+        },
+        categoryId: 6,
+        category: {
+            name: "Fuente",
+            id: 6
+        }
+    },
+    {
+        id: 20,
+        name: "Motherboard Asrock X370M HDV R4.0 AM4",
+        img: "https://www.compugarden.com.ar/Temp/App_WebSite/App_PictureFiles/Items/90-MXB9P0-A0UAYZ_800.jpg",
+        price: 7814.38,
+        priceMP: 8986.54,
+        stock: 20,
+        general: {
+            socket: "AM4",
+            chipset: "X370",
+            platform: "AMD"
+        },
+        connectivity: {
+            HDMIOutputs: 1,
+            DSUBOutputs: 1,
+            DisplayPortOutputs: "No",
+            DVIDOutputs: 1,
+            SATAPorts: 4,
+            SlotM2: "1 (Soporta NVMe Y SATA)",
+            SlotPCIE16X: 1,
+            SlotPCIE1X: 1,
+            networkCard: "LAN 10/100/1000 Mbps.",
+            WIFI: "No",
+            USB: "4 X USB 3.0, 2 X 2.0"
+        },
+        memory: {
+            DDR4DIMMSlotQuantity: "2 (Max. 32 GB)"
+        },
+        sound: {
+            sound: "Realtek ALC887/897 Audio Codec"
+        },
+        energy: {
+            PinConnector24: 1,
+            PinCPUConector4: 1
+        },
+        categoryId: 2,
+        category: {
+            name: "Motherboard",
+            id: 2
         }
     }
 ];

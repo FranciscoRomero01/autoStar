@@ -1,6 +1,8 @@
-.cards{
+.card{
     flex-direction: row !important;
     justify-content: space-around;
+    height: 350px;
+    width: 250px;
 }
 
 .card-title{
@@ -8,7 +10,19 @@
     font-size: 12px !important;
 }
 
-img{
-    width: 250px !important;
+.card-image{
+    display: flex;
+    justify-content: center;
+}
+
+.card-image img{
     height: 150px;
+    width: 150px !important;
+    text-align: center;
+}
+
+.card-content a{
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
 }

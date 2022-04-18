@@ -1,41 +1,39 @@
 import { useState, useEffect } from "react";
 import { Item } from "./Item";
 import data from '../utils/product';
-
+import { useParams } from "react-router-dom";
+import customFetch from "../utils/customFetch";
 
 export const ItemList = () => {
 
-    const getData = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                return resolve(data.caracteristicas);
-            }, 2000)
-        });
-    };
-    
-    
-    console.log(getData());
-
     const [datos, setDatos] = useState([]);
+    const { idCategory } = useParams();
+
+    console.log(idCategory);
 
     useEffect(() => {
-        const requestData = async () => {
-            let readyData = await getData();
-            setDatos(readyData);
-        }
-        requestData();
-    }, []);
+        if (idCategory === undefined) {
+            customFetch(2000, data)
+                .then(result => setDatos(result))
+                .catch(err => console.log(err))
+        } else{
+            customFetch(2000, data.filter(item => item.categoryId === parseInt(idCategory)))
+                .then(result => setDatos(result))
+                .catch(err => console.log(err))
+            }
+        
+    }, [idCategory]);
 
-    console.log(datos);
-
+    
     return(
         <>
-          <div>
-              {datos.map((datos) => (
-                  <Item key={datos.id} {...datos} />
-                ))
-              }
-          </div>
+            { 
+              datos.length > 0
+              ? datos.map((datos) => (
+                 <Item key={datos.id} {...datos} />
+              ))
+              : <p> Cargando... </p>
+            }
         </>
     );
 }

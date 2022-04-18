@@ -1,33 +1,19 @@
 import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 import data from "../utils/product";
+import customFetch from "../utils/customFetch";
 import { useParams } from 'react-router';
 
 const ItemDetailConteiner = () => {
 
-    const { idCategoty } = useParams();
-
-    console.log(idCategoty);
-
-    function getItem() {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                return resolve(data[3]);
-            }, 2000 )
-        });
-    };
-
-    const [description, setDescription] = useState([]);
+    const [description, setDescription] = useState({});
+    const { idItem } = useParams();
 
     useEffect(() => {
-        const descriptionData = async () => {
-            let readyDescription = await getItem();
-            setDescription(readyDescription);
-        }
-        descriptionData();
-    });
-
-    console.log(description);
+        customFetch(2000, data.find(item => item.id === parseInt(idItem)))
+            .then(result => setDescription(result))
+            .catch(err => console.log(err))
+    }, []);
 
     return(
         <div>
