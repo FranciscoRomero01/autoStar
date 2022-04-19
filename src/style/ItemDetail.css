@@ -77,6 +77,10 @@
     border-bottom: 2px solid silver;
 }
 
+.description h6{
+    font-weight: bold;
+}
+
 .general p, .coolersHeatsinks p, .memory p{
     font-size: 15px;
     text-align: center;

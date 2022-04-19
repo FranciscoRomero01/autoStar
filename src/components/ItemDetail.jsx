@@ -1,7 +1,20 @@
 import '../style/ItemDetail.css';
 import ItemCount from './ItemCount';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({item}) => {
+
+    const [itemCount, setItemCount] = useState(0);
+
+    const onAdd = (qty) => {
+        setItemCount(qty);
+        if(qty === 0){
+            alert('Por favor, comprar 1 o mas productos')  
+        } else{
+            alert(`Seguro quiere comprar ${qty} productos de ${item.name}`)
+        }
+    }
 
     return(
         <>
@@ -25,7 +38,14 @@ const ItemDetail = ({item}) => {
                         </div>
                         <div className='itemDetailStock right'>
                             <h4> Stock disponible: {item.stock}</h4>
-                            <ItemCount />
+                            {
+                                itemCount === 0
+                                ?<><ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd}/><onAdd></onAdd>
+                                </>
+                                :<div className="price red accent-4">
+                                    <Link to='/cart' className="white-text"> VER CARRITO </Link>
+                                </div>
+                            }
                         </div>
                     </div>
                 </div>
@@ -38,66 +58,9 @@ const ItemDetail = ({item}) => {
                     </h6>
                 </div>
                 </>
-            /*<div className='description'>
-                <div className='general'>
-                    <h5>General</h5>
-                    <div className='family'>
-                        <h6 className='descriptionFamily'>Familia</h6>
-                        <p>{data.general.family}</p>
-                    </div>
-                    <div className='cores'>
-                        <h6 className='descriptionCores'>Nucleos</h6>
-                        <p>{data.general.cores}</p>
-                    </div>
-                    <div className='threads'>
-                        <h6 className='descriptionThreads'>Hilos</h6>
-                        <p>{data.general.threads}</p>
-                    </div>
-                    <div className='turboFrequency'>
-                        <h6 className='descriptionTF'>Frecuencia Turbo</h6>
-                        <p>{data.general.turboFrequency}</p>
-                    </div>
-                    <div className='frecuency'>
-                        <h6 className='descriptionFrecuency'>Frecuencia Base</h6>
-                        <p>{data.general.frequency}</p>
-                    </div>
-                    <div className='integratedGraph'>
-                        <h6 className='descriptionIG'>Grafica Integrada</h6>
-                        <p>{data.general.integratedGraph}</p>
-                    </div>
+                :<div className="progress">
+                    <div className="indeterminate"></div>
                 </div>
-                <div className='coolersHeatsinks'>
-                    <h5>Coolers Y Disipadores</h5>
-                    <div className='cooler'>
-                        <h6 className='descriptionCooler'>Incluye Cooler CPU</h6>
-                        <p>{data.coolersHeatsinks.coolerCPU}</p>
-                    </div>
-                    <div className='tdp'>
-                        <h6 className='descriptionTDP'>TDP</h6>
-                        <p>{data.coolersHeatsinks.tdp}</p>
-                    </div>
-                    <div className='overclockeable'>
-                        <h6 className='descriptionOverclockeable'>Desbloqueado - Overclockeable</h6>
-                        <p>{data.coolersHeatsinks.overclockeable}</p>
-                    </div>
-                </div>
-                <div className='memory'>
-                    <h5>Memoria</h5>
-                    <div className='l1'>
-                        <h6 className='descriptionL1'>L1</h6>
-                        <p>{data.memory.l1}</p>
-                    </div>
-                    <div className='l2'>
-                        <h6 className='descriptionL2'>L2</h6>
-                        <p>{data.memory.l2}</p>
-                    </div>
-                    <div className='l3'>
-                        <h6 className='descriptionL3'>L3</h6>
-                        <p>{data.memory.l3}</p>
-                    </div>
-                </div>
-            </div>*/
-             : <p>Cargando...</p>
             }
         </>
     )

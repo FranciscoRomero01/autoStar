@@ -1,7 +1,12 @@
 nav{
-    padding: 0% 25px;
+    padding: 0% 5px;
 }
 
-.center{
-    margin-left: 225px;
+
+.brand-logo{
+    font-size: 25px !important;
+}
+
+li a{
+    font-size: 15px !important;
 }

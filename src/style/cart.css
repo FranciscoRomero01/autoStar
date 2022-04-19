@@ -1,0 +1,15 @@
+.cart{
+    height: 800px;
+    border: 30px #dbdbdb solid;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cart ul{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid white;
+}
