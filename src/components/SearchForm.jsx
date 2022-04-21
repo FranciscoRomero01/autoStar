@@ -6,7 +6,7 @@ const SearchForm = () => {
     return(
         <form>
             <Search />
-            <input id="icon_prefix" onKeyDown={handleEvent} type="text" className="validate"></input>
+            <input id="icon_prefix" type="text" className="validate"></input>
         </form>
     )
 }

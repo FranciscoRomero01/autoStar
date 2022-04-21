@@ -1,11 +1,14 @@
 import '../style/ItemDetail.css';
 import ItemCount from './ItemCount';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext } from './CartContext';
 
 const ItemDetail = ({item}) => {
 
     const [itemCount, setItemCount] = useState(0);
+
+    const cart = useContext(CartContext);
 
     const onAdd = (qty) => {
         setItemCount(qty);
@@ -14,7 +17,8 @@ const ItemDetail = ({item}) => {
         } else{
             alert(`Seguro quiere comprar ${qty} productos de ${item.name}`)
         }
-    }
+        cart.addToCart(item, qty);
+    };
 
     return(
         <>
@@ -40,8 +44,7 @@ const ItemDetail = ({item}) => {
                             <h4> Stock disponible: {item.stock}</h4>
                             {
                                 itemCount === 0
-                                ?<><ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd}/><onAdd></onAdd>
-                                </>
+                                ?<ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd}/>
                                 :<div className="price red accent-4">
                                     <Link to='/cart' className="white-text"> VER CARRITO </Link>
                                 </div>

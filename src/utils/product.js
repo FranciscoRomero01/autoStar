@@ -27,7 +27,7 @@ const data = [
         },
         categoryId: 1,
         category: {
-            name: "Micropricesadores",
+            name: "Microprocesadores",
             id: 1
         }
     },
@@ -59,7 +59,7 @@ const data = [
         },
         categoryId: 1,
         category: {
-            name: "Micropricesadores",
+            name: "Microprocesadores",
             id: 1
         }
     },
@@ -91,7 +91,7 @@ const data = [
         },
         categoryId: 1,
         category: {
-            name: "Micropricesadores",
+            name: "Microprocesadores",
             id: 1
         }
     },
@@ -123,7 +123,7 @@ const data = [
         },
         categoryId: 1,
         category: {
-            name: "Micropricesadores",
+            name: "Microprocesadores",
             id: 1
         }
     },

@@ -3,13 +3,70 @@
     border: 30px #dbdbdb solid;
     background: black;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: 50px 80px 550px 50px 50px;
 }
 
 .cart ul{
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(5, 1fr);
     border-bottom: 2px solid white;
+    height: 40px;
+}
+
+.cart h3{
+    height: 80px;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin: 0%;
+    padding: 15px;
+}
+
+.detele{
+    text-align: center;
+}
+
+.emptyCart, .deteleCart{
+    color: red;
+    font-weight: 900;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+.emptyCart:hover, .deteleCart:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.red-text{
+    text-align: center;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+.products{
+    height: 550px;
+}
+
+.product{
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(5, 1fr);
+    height: 100px;
+}
+
+.product img{
+    height: 100px;
+    margin-left: 75px;
+}
+
+.total a{
+    text-align: center;
+}
+
+.total p{
+    text-align: right;
 }
