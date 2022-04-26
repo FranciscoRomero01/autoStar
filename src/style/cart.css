@@ -1,21 +1,23 @@
 .cart{
-    height: 800px;
-    border: 30px #dbdbdb solid;
-    background: black;
-    color: white;
+    margin: 30px;
+    display: flex;
+}
+
+.info{
+    width: 60%;
     display: grid;
     grid-template-rows: 50px 80px 550px 50px 50px;
 }
 
-.cart ul{
+.info ul{
     display: grid;
     text-align: center;
     grid-template-columns: repeat(5, 1fr);
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid black;
     height: 40px;
 }
 
-.cart h3{
+.info h3{
     height: 80px;
     text-transform: uppercase;
     font-size: 25px;
@@ -27,15 +29,14 @@
     text-align: center;
 }
 
-.emptyCart, .deteleCart{
+.emptyInfo, .deteleInfo{
     color: red;
     font-weight: 900;
     padding: 15px;
     text-transform: uppercase;
 }
 
-.emptyCart:hover, .deteleCart:hover{
-    color: white;
+.emptyInfo:hover, .deteleInfo:hover{
     cursor: pointer;
 }
 
@@ -47,10 +48,6 @@
     align-items: center;
 }
 
-.products{
-    height: 550px;
-}
-
 .product{
     display: grid;
     text-align: center;
@@ -60,13 +57,45 @@
 
 .product img{
     height: 100px;
-    margin-left: 75px;
+    margin-left: 25px;
 }
 
-.total a{
+.back{
+    margin-top: 15px;
+}
+
+.total{
+    border: 1px #b900005c solid;
+    margin: 20px;
+    padding: 15px;
+    height: 500px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.total h4 {
+    text-transform: uppercase;
     text-align: center;
+    font-size: 25px;
+    font-weight: bold;
 }
 
-.total p{
-    text-align: right;
+.sub, .envio, .envioDisc, .totalC{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.confirm{
+    text-align: center;
+    margin: 10px;
+}
+
+.confirm a{
+    padding: 15px;
+    background: red;
+    color: white;
+    cursor: pointer;
 }

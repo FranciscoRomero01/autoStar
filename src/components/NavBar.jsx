@@ -6,7 +6,7 @@ function NavBar(){
     return(
         <nav className="black">
             <div className="nav-wrapper">
-                <Link to='/' className="brand-logo white-text center">AutoStar</Link>
+                <Link to='/' className="brand-logo white-text center">I-Star</Link>
                 <Link to='/cart' className="left"><CartWidget /></Link>
                 <ul className="right">
                     <li><a href="#" className="white-text">Iniciar Sesion</a></li>
