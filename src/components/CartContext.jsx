@@ -7,8 +7,6 @@ const CartContextProvider = ({children}) => {
 
     const addToCart = (item, qty) => {
         let found = cartList.find(data => data.itemId === item.id);
-        const total = item.price * qty;
-        console.log(total);
         if ( found === undefined) {
             setCartList([
                 ...cartList,

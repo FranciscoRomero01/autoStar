@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Item } from "./Item";
-import data from '../utils/product';
 import { useParams } from "react-router-dom";
-import customFetch from "../utils/customFetch";
+import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
+import db from "../utils/firebaseConfig";
 
 export const ItemList = () => {
 
@@ -12,16 +12,24 @@ export const ItemList = () => {
     console.log(idCategory);
 
     useEffect(() => {
-        if (idCategory === undefined) {
-            customFetch(2000, data)
-                .then(result => setDatos(result))
-                .catch(err => console.log(err))
-        } else{
-            customFetch(2000, data.filter(item => item.categoryId === parseInt(idCategory)))
-                .then(result => setDatos(result))
-                .catch(err => console.log(err))
+        const fetchFromFirestore = async () => {
+            let q
+            if (idCategory) {
+                q = query(collection(db, "products"), where('categoryId', '==', idCategory));
+            } else {
+                q = query(collection(db, "products"), orderBy('name'));
             }
-        
+
+            const querySnapshot = await getDocs(q);
+            const dataFromFirestore = querySnapshot.docs.map((doc) => ({
+                id: doc.id,
+                ...doc.data()
+            }));
+            return dataFromFirestore;
+        }
+        fetchFromFirestore()
+            .then(result => setDatos(result))
+            .catch(err => console.log(err));
     }, [idCategory]);
 
     
