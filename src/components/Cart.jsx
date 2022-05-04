@@ -3,12 +3,59 @@ import { Link } from 'react-router-dom';
 import '../style/cart.css';
 import FormatNumber from '../utils/FormatNumber';
 import { CartContext } from './CartContext';
+import {collection, doc, increment, serverTimestamp, setDoc, updateDoc} from 'firebase/firestore';
+import db from '../utils/firebaseConfig';
 
 
 const Cart = () => {
 
     const cart = useContext(CartContext);
 
+    
+    const createOrder = () => {
+
+        let item = cart.cartList.map(item => ({
+            id: item.itemId,
+            title: item.itemName,
+            price: item.itemPrice,
+            qty : item.itemQty
+        }));
+
+        cart.cartList.forEach(async (item) => {
+            const itemStock = doc(db, "products", item.itemId);
+            await updateDoc(itemStock, {
+                stock: increment(-item.itemQty)
+            });
+        });
+        
+        let order = {
+            buyer: {
+                name: "Francisco Romero",
+                email: "franRomero@gmail.com",
+                phone: "123456789"
+            },
+            price : cart.total(),
+            items: item,
+            date: serverTimestamp()
+        };
+        console.log(order);
+
+        
+
+        const createOrderInFirestore = async () => {
+            const newOrder = doc(collection(db, "orders"));
+            await setDoc(newOrder, order);
+            return newOrder;
+        }
+        
+        createOrderInFirestore()
+            .then(result => alert('Su pedido fue tomado con exito. Guarde el ID de su pedido.\n\n\nID del pedido: ' + result.id + '\n\n'))
+            .catch(err => console.log(err));
+
+        cart.clearItem();
+    }
+    
+    
     return (
         <>
             <div className="cart">
@@ -86,7 +133,7 @@ const Cart = () => {
                             }
                         </div>
                         <div className="confirm">
-                            <a>Confirmar Compra</a>
+                            <a onClick={createOrder}>Confirmar Compra</a>
                         </div>
                     </div>
                     <div className='back'>

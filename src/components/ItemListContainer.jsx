@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../style/ItemListContainer.css';
 import { ItemList } from "./itemList";
+import SearchForm from './SearchForm';
 
 const ItemListContainer = () => {
 
@@ -18,6 +19,9 @@ const ItemListContainer = () => {
                         <li><Link to='/category/5'>Almacenamiento</Link></li>
                         <li><Link to='/category/6'>Fuente</Link></li>
                     </ul>
+                </div>
+                <div className='busqueda'>
+                    <SearchForm />
                 </div>
             </div>
             <div className="cards">

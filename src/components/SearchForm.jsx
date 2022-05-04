@@ -3,10 +3,12 @@ import '../style/SearchForm.css'
 
 const SearchForm = () => {
 
+    
+
     return(
         <form>
             <Search />
-            <input id="icon_prefix" type="text" className="validate"></input>
+            <input id="icon_prefix" type="text" className="validate" placeholder="Buscar producto"></input>
         </form>
     )
 }
