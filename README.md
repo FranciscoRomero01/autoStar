@@ -1,6 +1,6 @@
 # I-Star
 
-![image] (https://github.com/FranciscoRomero01/autoStar/blob/main/React-App-Google-Chrome-2022-05-18-13-09-23.gif)
+![image] (https://github.com/FranciscoRomero01/autoStar/blob/main/I-Star_Site.gif)
 
 ## Proyecto para curso de ReactJS
 
