@@ -6,30 +6,31 @@ const Users = () => {
 
     const user = useContext(UsersContext);
 
-    // Estado del nombre del usuario
+    // Username Status
     const [name, setName] = useState([]);
-    // Estado del mail del usuario
+    // User email status
     const [mail, setMail] = useState([]);
-    // Estado de la contraseña
+    // password status
     const [password, setPassword] = useState([]);
-    // Estado del DNI 
+    // Status of the user's ID
     const [dni, setDni] = useState([]);
 
-    // Asignando valor al estado de nombre
+    // Assigning value to name state
     const nameUsers = (e) => {
         setName(e.target.value)
     }
 
-    // Asignando valor al estado de mail
+    // Assigning value to mail status
     const mailUsers = (e) => {
         setMail(e.target.value)
     }
 
+    // Assigning value to the DNI status
     const dniUsers = (e) => {
         setDni(e.target.value)
     }
 
-    // Asignando valor al estado de contraseña
+    // Assigning value to password state
     const passwordUsers = (e) => {
         setPassword(e.target.value)
     }
@@ -37,6 +38,7 @@ const Users = () => {
     function submit(e) {
         e.preventDefault();
         
+        // Assigning parameters to the addUsers function
         user.addUsers(name, mail, password, dni);
     }
 

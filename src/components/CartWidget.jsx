@@ -5,7 +5,7 @@ import { CartContext } from "../context/CartContext";
 
 const CartWidget = () => {
 
-    // Adquiriendo de carrito
+    // Acquiring from cart
     const cart = useContext(CartContext);
 
     return(

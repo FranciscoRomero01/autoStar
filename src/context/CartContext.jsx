@@ -4,10 +4,10 @@ export const CartContext = createContext();
 
 const CartContextProvider = ({children}) => {
 
-    // Estado del carrito
+    // Cart status
     const [cartList, setCartList] = useState([]);
 
-    // Agregando items al carrito
+    // Add items to cart
     const addToCart = (item, qty) => {
         let found = cartList.find(data => data.itemId === item.id);
         if ( found === undefined) {
@@ -26,41 +26,41 @@ const CartContextProvider = ({children}) => {
         }
     }
 
-    // Borrar items del carrito
+    // Delete items from cart
     const deleteItem = (id) => {
         let result = cartList.filter(item => item.itemId !== id);
         setCartList(result);
     }
 
-    // Vaciar carrito
+    // Empty cart
     const clearItem = () => {
         setCartList([]);
     }
 
-    // Sacando el total del producto
+    // Taking the total of the product
     function totalItem(itemId) {
         let itemTotal = cartList.map(item => item.itemId).indexOf(itemId);
-        // Multiplicando precio * cantidad
+        // Multiplying price * quantity
         return cartList[itemTotal].itemPrice * cartList[itemTotal].itemQty;
     }
 
-    // Calculando subtotal
+    // Calculate Subtotal
     const subTotal = () => {
         let subTotal = cartList.map(item => totalItem(item.itemId));
         return subTotal.reduce((previousValue, currentValue) => previousValue + currentValue);
     }
 
-    // Precio del envio
+    // Shipping price
     const envio = () => {
         return 1500;
     }
 
-    // Calculando el total
+    // Calculating the total
     const total = () => {
         return subTotal();
     }
 
-    // Calcula el total de cantitdad de productos en el carrito
+    // Calculate the total number of products in the cart
     const itemsQty = () => {
         let qtys = cartList.map(item => item.itemQty);
         return qtys.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);

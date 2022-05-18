@@ -16,14 +16,17 @@ export const ItemList = () => {
         const fetchFromFirestore = async () => {
             let q
             if (idCategory) {
-                // Mostrando producto segun su ID de categoria
+                // Showing product according to its category ID
                 q = query(collection(db, "products"), where('categoryId', '==', idCategory));
             } else {
-                // Mostrando todos los productos (ordenado por su nombre)
+                // Showing all products (sorted by name)
                 q = query(collection(db, "products"), orderBy('name'));
             }
 
+            // Acquiring products
             const querySnapshot = await getDocs(q);
+
+            // mapping products
             const dataFromFirestore = querySnapshot.docs.map((doc) => ({
                 id: doc.id,
                 ...doc.data()

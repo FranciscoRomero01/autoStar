@@ -11,15 +11,16 @@ import { UsersContext } from '../context/UsersContext';
 
 const Cart = () => {
 
-    // Adquiriendo de carrito
+    // Acquiring from cart
     const cart = useContext(CartContext);
 
+    // Acquiring from user
     const user = useContext(UsersContext);
 
-    // Creando la orden de compra
+    // Creating the purchase order
     const createOrder = () => {
 
-        // Adquiriendo informacion de los productos
+        // Acquiring product information
         let item = cart.cartList.map(item => ({
             id: item.itemId,
             title: item.itemName,
@@ -35,7 +36,7 @@ const Cart = () => {
             });
         });
 
-        // Datos del pedido
+        // Order data
         let order = {
             buyer: user.users,
             price : cart.total(),
@@ -46,7 +47,7 @@ const Cart = () => {
         console.log(order);
 
         
-        // creando la coleccion order en firebase 
+        // Creating the order collection in firebase
         const createOrderInFirestore = async () => {
             const newOrder = doc(collection(db, "orders"));
             await setDoc(newOrder, order);
@@ -62,6 +63,7 @@ const Cart = () => {
             }))
             .catch(err => console.log(err));
 
+        // Reset the cart by deleting all its products
         cart.clearItem();
     }
     

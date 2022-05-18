@@ -3,15 +3,15 @@ import '../style/ItemCount.css';
 
 function ItemCount ({ stock, initial = 0, onAdd}){
 
-    // Estado del contador
+    // counter status
     const [count, setCount] = useState(0);
 
-    // Sumando al contador
+    // Adding to the counter
     function increment(){
         if(count < stock) setCount(count+1)
     }
 
-    // Restando al contador
+    // Subtracting the counter
     function decrement(){
         if (count >= initial+1) {
             setCount(count - 1);

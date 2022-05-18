@@ -6,21 +6,24 @@ import db from "../utils/firebaseConfig";
 
 const ItemDetailConteiner = () => {
 
-    // Estado de descripcion de los productos
+    // Products Description Status
     const [description, setDescription] = useState({});
     const { idItem } = useParams();
 
     useEffect(() => {
         const firestoreFetch = async (idItem) => {
-            // Adquiriendo productos del firebase
+            // Acquiring firebase products
             const docRef = doc(db, "products", idItem);
+            // selecting firebase product
             const docSnap = await getDoc(docRef);
             
+            // If the product exists
             if (docSnap.exists()) {
-              return {
-                  id: idItem,
-                  ...docSnap.data()
-              }
+                // Return the specific product
+                return {
+                    id: idItem,
+                    ...docSnap.data()
+                }
             } else {
               console.log("No such document!");
             }

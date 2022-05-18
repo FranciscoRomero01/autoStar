@@ -6,13 +6,13 @@ import { CartContext } from '../context/CartContext';
 
 const ItemDetail = ({item}) => {
 
-    // Estado de cantidad de items del producto
+    // Product item quantity status
     const [itemCount, setItemCount] = useState(0);
 
-    // Adquiriendo de carrito
+    // Acquiring from cart
     const cart = useContext(CartContext);
 
-    // Modificando el estado de cantidad de items
+    // Modifying the item quantity status
     const onAdd = (qty) => {
         setItemCount(qty);
         if(qty === 0){
