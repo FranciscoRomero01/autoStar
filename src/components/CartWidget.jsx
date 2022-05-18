@@ -1,10 +1,11 @@
 import { Badge } from "@material-ui/core";
 import { ShoppingCartOutlined } from "@material-ui/icons";
 import { useContext } from "react";
-import { CartContext } from "./CartContext";
+import { CartContext } from "../context/CartContext";
 
 const CartWidget = () => {
 
+    // Adquiriendo de carrito
     const cart = useContext(CartContext);
 
     return(

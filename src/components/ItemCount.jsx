@@ -2,12 +2,16 @@ import { useState } from "react";
 import '../style/ItemCount.css';
 
 function ItemCount ({ stock, initial = 0, onAdd}){
+
+    // Estado del contador
     const [count, setCount] = useState(0);
 
+    // Sumando al contador
     function increment(){
         if(count < stock) setCount(count+1)
     }
 
+    // Restando al contador
     function decrement(){
         if (count >= initial+1) {
             setCount(count - 1);

@@ -2,18 +2,24 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import '../style/cart.css';
 import FormatNumber from '../utils/FormatNumber';
-import { CartContext } from './CartContext';
-import {collection, doc, increment, serverTimestamp, setDoc, updateDoc} from 'firebase/firestore';
+import { CartContext } from '../context/CartContext';
+import {collection, doc, getDoc, increment, query, serverTimestamp, setDoc, updateDoc} from 'firebase/firestore';
 import db from '../utils/firebaseConfig';
+import swal from 'sweetalert';
+import { UsersContext } from '../context/UsersContext';
 
 
 const Cart = () => {
 
+    // Adquiriendo de carrito
     const cart = useContext(CartContext);
 
-    
+    const user = useContext(UsersContext);
+
+    // Creando la orden de compra
     const createOrder = () => {
 
+        // Adquiriendo informacion de los productos
         let item = cart.cartList.map(item => ({
             id: item.itemId,
             title: item.itemName,
@@ -21,27 +27,26 @@ const Cart = () => {
             qty : item.itemQty
         }));
 
+        
         cart.cartList.forEach(async (item) => {
             const itemStock = doc(db, "products", item.itemId);
             await updateDoc(itemStock, {
                 stock: increment(-item.itemQty)
             });
         });
-        
+
+        // Datos del pedido
         let order = {
-            buyer: {
-                name: "Francisco Romero",
-                email: "franRomero@gmail.com",
-                phone: "123456789"
-            },
+            buyer: user.users,
             price : cart.total(),
             items: item,
             date: serverTimestamp()
         };
+
         console.log(order);
 
         
-
+        // creando la coleccion order en firebase 
         const createOrderInFirestore = async () => {
             const newOrder = doc(collection(db, "orders"));
             await setDoc(newOrder, order);
@@ -49,7 +54,12 @@ const Cart = () => {
         }
         
         createOrderInFirestore()
-            .then(result => alert('Su pedido fue tomado con exito. Guarde el ID de su pedido.\n\n\nID del pedido: ' + result.id + '\n\n'))
+            .then(result => swal({
+                text: 'Gracias por su compra',
+                title: `Su compra se ha reslizado con exito ${result.id}`,
+                icon: 'success',
+                Button: 'Ok',
+            }))
             .catch(err => console.log(err));
 
         cart.clearItem();
@@ -61,6 +71,7 @@ const Cart = () => {
             <div className="cart">
                 <div className="info">
                     {
+                        // Si el carrito tiene mas de 1 producto
                         cart.cartList.length > 0
                         ?
                         <div>
@@ -77,7 +88,9 @@ const Cart = () => {
                     </ul>
                     <div className='products'>
                     {
+                        // Si el carrito tiene mas de 1 producto
                         cart.cartList.length > 0 ?
+                        // Mapea los productos del carrito
                         cart.cartList.map(item => 
                         <>
                             <div className='product' key={item.itemId}>

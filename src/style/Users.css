@@ -1,0 +1,52 @@
+.users{
+    width: 100%;
+    height: 800px;
+    background: url("https://firebasestorage.googleapis.com/v0/b/compustar-coder3.appspot.com/o/pcgamer.webp?alt=media&token=438f167f-0bb4-4601-bed9-14d817b8540d"), fixed, no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.usersDiv{
+    background-color: white;
+    width: 400px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.usersDivForm{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+}
+
+.usersDivForm input{
+    text-align: center;
+}
+
+.usersDivTitle{
+    margin: 25px 0px;
+}
+
+.submit{
+    margin: 15px 0px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.submit:hover{
+    background-color: red;
+    cursor: pointer;
+}
+
+.password{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}

@@ -6,6 +6,7 @@ import db from "../utils/firebaseConfig";
 
 export const ItemList = () => {
 
+    // Estado de los datos
     const [datos, setDatos] = useState([]);
     const { idCategory } = useParams();
 
@@ -15,8 +16,10 @@ export const ItemList = () => {
         const fetchFromFirestore = async () => {
             let q
             if (idCategory) {
+                // Mostrando producto segun su ID de categoria
                 q = query(collection(db, "products"), where('categoryId', '==', idCategory));
             } else {
+                // Mostrando todos los productos (ordenado por su nombre)
                 q = query(collection(db, "products"), orderBy('name'));
             }
 
@@ -27,6 +30,7 @@ export const ItemList = () => {
             }));
             return dataFromFirestore;
         }
+        
         fetchFromFirestore()
             .then(result => setDatos(result))
             .catch(err => console.log(err));

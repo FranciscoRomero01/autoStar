@@ -6,11 +6,13 @@ import db from "../utils/firebaseConfig";
 
 const ItemDetailConteiner = () => {
 
+    // Estado de descripcion de los productos
     const [description, setDescription] = useState({});
     const { idItem } = useParams();
 
     useEffect(() => {
         const firestoreFetch = async (idItem) => {
+            // Adquiriendo productos del firebase
             const docRef = doc(db, "products", idItem);
             const docSnap = await getDoc(docRef);
             
@@ -20,7 +22,6 @@ const ItemDetailConteiner = () => {
                   ...docSnap.data()
               }
             } else {
-              // doc.data() will be undefined in this case
               console.log("No such document!");
             }
         }

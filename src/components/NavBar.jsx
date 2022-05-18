@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
+import { AccountCircle } from "@material-ui/icons";
 import '../style/NavBar.css';
 
 function NavBar(){
@@ -9,13 +10,11 @@ function NavBar(){
                 <Link to='/' className="brand-logo white-text center">I-Star</Link>
                 <Link to='/cart' className="left"><CartWidget /></Link>
                 <ul className="right">
-                    <li><a href="#" className="white-text">Iniciar Sesion</a></li>
-                    <li><a href="#" className="white-text">Registrarse</a></li>
+                    <Link to='/users'><AccountCircle /></Link>
                 </ul>
             </div>
       </nav>
-    )
-}
+    );
+};
 
 export default NavBar;
-

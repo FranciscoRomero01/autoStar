@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../style/Item.css';
 
-export const Item = ({id, img, name, year, kilometres, price}) => {
+export const Item = ({id, img, name, price}) => {
 
     return(
         <div className="card">

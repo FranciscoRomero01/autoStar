@@ -2,20 +2,23 @@ import '../style/ItemDetail.css';
 import ItemCount from './ItemCount';
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CartContext } from './CartContext';
+import { CartContext } from '../context/CartContext';
 
 const ItemDetail = ({item}) => {
 
+    // Estado de cantidad de items del producto
     const [itemCount, setItemCount] = useState(0);
 
+    // Adquiriendo de carrito
     const cart = useContext(CartContext);
 
+    // Modificando el estado de cantidad de items
     const onAdd = (qty) => {
         setItemCount(qty);
         if(qty === 0){
-            alert('Por favor, comprar 1 o mas productos')  
+            alert('Por favor, comprar 1 o mas productos');
         } else{
-            alert(`Seguro quiere comprar ${qty} productos de ${item.name}`)
+            alert(`Seguro quiere comprar ${qty} productos de ${item.name}`);
         }
         cart.addToCart(item, qty);
     };
