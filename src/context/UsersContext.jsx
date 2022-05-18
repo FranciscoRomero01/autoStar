@@ -19,6 +19,7 @@ const UsersContextProvider = ({children}) => {
         setUsers(user);
     }
     console.log(users);
+    
     const createOrderInFirestore = async () => {
             const newOrder = doc(collection(db, "users"));
             await setDoc(newOrder, users);

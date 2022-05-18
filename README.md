@@ -1,4 +1,7 @@
 # I-Star
+
+![image] (https://github.com/FranciscoRomero01/autoStar/blob/main/React-App-Google-Chrome-2022-05-18-13-09-23.gif)
+
 ## Proyecto para curso de ReactJS
 
 I-Star es un e-commerce sobre componentes de computadoras
